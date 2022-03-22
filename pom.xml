@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>io.learnk8s</groupId>
+	<artifactId>knote-java</artifactId>
+	<version>4.0.0-SNAPSHOT</version>
+	<name>knote</name>
+	<description>Knote</description>
+
+	<scm>
+		<connection>scm:git:https://github.com/arnabnandy1706/javaapp-cicd.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/arnabnandy1706/javaapp-cicd.git</developerConnection>
+		<url>https://github.com/arnabnandy1706/javaapp-cicd</url>
+		<tag>HEAD</tag>
+  	</scm>
+
+	<properties>
+		<java.version>8</java.version>
+	</properties>
+
+	<!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+				<autoVersionSubmodules>true</autoVersionSubmodules>
+				<tagNameFormat>v@{project.version}</tagNameFormat>
+				<goals>deploy</goals>
+				</configuration>
+	</plugin> -->
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.atlassian.commonmark</groupId>
+			<artifactId>commonmark</artifactId>
+			<version>0.12.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<!-- <repositories>
+      <repository>
+         <id>nexus-premise</id>
+         <url>http://ec2-15-206-189-141.ap-south-1.compute.amazonaws.com/maven-public</url>
+      </repository>
+   </repositories> -->
+   <distributionManagement>
+      <repository>
+         <id>nexus-premise</id>
+         <url>http://ec2-15-206-189-141.ap-south-1.compute.amazonaws.com:8081/repository/knoteapp-RELEASE/</url>
+      </repository>
+	  <snapshotRepository>
+            <id>nexus-premise</id>
+            <url>http://ec2-15-206-189-141.ap-south-1.compute.amazonaws.com:8081/repository/knoteapp-SNAPSHOT/</url>
+        </snapshotRepository>
+   </distributionManagement>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+				<localCheckout>true</localCheckout>
+				<pushChanges>false</pushChanges>
+				<preparationGoals>validate</preparationGoals>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
