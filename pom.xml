@@ -72,17 +72,17 @@
 	<!-- <repositories>
       <repository>
          <id>nexus-premise</id>
-         <url>http://34.205.32.87:8081/repository/maven-public</url>
+         <url>http://18.233.168.84:8081/repository/maven-public</url>
       </repository>
    </repositories> -->
    <distributionManagement>
       <repository>
          <id>nexus-premise</id>
-         <url>http://34.205.32.87:8081/repository/maven-releases/</url>
+         <url>http://18.233.168.84:8081/repository/maven-releases/</url>
       </repository>
 	  <snapshotRepository>
             <id>nexus-premise</id>
-            <url>http://34.205.32.87:8081/repository/maven-snapshots/</url>
+            <url>http://18.233.168.84:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
    </distributionManagement>
 
