@@ -15,8 +15,10 @@
 	<description>Knote</description>
 
 	<scm>
-		<connection>scm:git:https://github.com/Sarang-Dharme/jenkins-release.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/Sarang-Dharme/jenkins-release.git</developerConnection>
+	<!--	<connection>scm:git:https://github.com/Sarang-Dharme/jenkins-release.git</connection> -->
+	<!--	<developerConnection>scm:git:ssh://git@github.com/Sarang-Dharme/jenkins-release.git</developerConnection> -->
+	<!--	<connection>scm:git:https://github.com/Sarang-Dharme/jenkins-release.git</connection> -->
+		<developerConnection>scm:git:git@github.com:Sarang-Dharme/jenkins-release.git</developerConnection>
 		<url>https://github.com/Sarang-Dharme/jenkins-release</url>
 		<tag>HEAD</tag>
   	</scm>
