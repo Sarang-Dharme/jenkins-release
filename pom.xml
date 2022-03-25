@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.demo.sarang</groupId>
 	<artifactId>knote-java</artifactId>
-	<version>4.0.1-SNAPSHOT</version>
+	<version>4.0.1</version>
 	<name>knote</name>
 	<description>Knote</description>
 
@@ -19,7 +19,7 @@
 	<!--	<connection>scm:git:git@github.com:Sarang-Dharme/jenkins-release.git</connection> -->
 	<!--	<developerConnection>scm:git:git@github.com:Sarang-Dharme/jenkins-release.git</developerConnection> -->
 		<url>https://github.com/Sarang-Dharme/jenkins-release</url>
-		<tag>HEAD</tag>
+		<tag>knote-java-4.0.1</tag>
   	</scm>
 
 	<properties>
