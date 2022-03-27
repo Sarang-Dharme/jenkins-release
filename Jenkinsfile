@@ -1,7 +1,7 @@
 /* Pipeline */
 
 pipeline {
-  agent { label "master" }
+  agent any
 
 /* Dynamic variable assignment */
 
